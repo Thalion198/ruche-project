@@ -1,0 +1,43 @@
+.Greg {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: #3972bc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    }
+
+.Greg h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    }
+
+ .Greg p{
+    text-align: center;
+    color: #ffffff;
+ }
+ 
+ .Greg a{
+    text-align: center;
+    color: #ffffff;
+ }
+
+ .Greg1{
+    font-size: 25px;
+    background-color: #000;
+    text-decoration: none;
+ }
+
+ .Greg1:hover{
+    color: #2270d6;
+ }
+
+.Greg iframe {
+    min-height: 100vh;
+    width: 100%;
+    }

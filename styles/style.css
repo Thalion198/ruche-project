@@ -6,10 +6,16 @@ h1
 
 .coudji{
     height:100px;
+    border: solid black 2px;
+    border-radius: 10px;
 }
 
 .coudji h2{
-    animation: changementCouleurA 48s linear infinite;
+    width: 55px;
+    position: relative;
+    transform: translateY(-50%);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    animation: mouvement 8s linear infinite, changementCouleurA 48s linear infinite;
 }
 
 .balle {
@@ -18,8 +24,8 @@ h1
     background-color: red;
     border-radius: 50%;
     position: relative;
-    top: 10%;
     transform: translateY(-50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
     animation: mouvement 8s linear infinite, changementCouleurB 48s linear infinite;
 }
   

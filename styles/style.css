@@ -3,3 +3,76 @@ h1
     color: blue;
     text-align: center;
 }
+
+.coudji{
+    height:100px;
+}
+
+.coudji h2{
+    animation: changementCouleurA 4s linear infinite;
+}
+
+.balle {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+    transform: translateY(-50%);
+    animation: mouvement 4s linear infinite, changementCouleurB 4s linear infinite;
+}
+  
+@keyframes mouvement {
+    0%, 100% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 50px);
+    }
+}
+
+@keyframes changementCouleurA {
+    0%, 100% {
+      color: red;
+    }
+    16.67% {
+      color: orange;
+    }
+    33.33% {
+      color: yellow;
+    }
+    50% {
+      color: green;
+    }
+    66.67% {
+      color: blue;
+    }
+    83.33% {
+      color: indigo;
+    }
+}
+
+@keyframes changementCouleurB {
+    0%, 100% {
+      background-color: red;
+    }
+    16.67% {
+      background-color: orange;
+    }
+    33.33% {
+      background-color: yellow;
+    }
+    50% {
+      background-color: green;
+    }
+    66.67% {
+      background-color: blue;
+    }
+    83.33% {
+      background-color: indigo;
+    }
+}
+
+
+  

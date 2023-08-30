@@ -9,7 +9,7 @@ h1
 }
 
 .coudji h2{
-    animation: changementCouleurA 4s linear infinite;
+    animation: changementCouleurA 48s linear infinite;
 }
 
 .balle {
@@ -20,7 +20,7 @@ h1
     position: relative;
     top: 10%;
     transform: translateY(-50%);
-    animation: mouvement 4s linear infinite, changementCouleurB 4s linear infinite;
+    animation: mouvement 8s linear infinite, changementCouleurB 48s linear infinite;
 }
   
 @keyframes mouvement {
@@ -34,43 +34,49 @@ h1
 
 @keyframes changementCouleurA {
     0%, 100% {
-      color: red;
+        color: red;
     }
-    16.67% {
-      color: orange;
+    14.28% {
+        color: orange;
     }
-    33.33% {
-      color: yellow;
+    28.57% {
+        color: yellow;
     }
-    50% {
-      color: green;
+    42.85% {
+        color: green;
     }
-    66.67% {
-      color: blue;
+    57.14% {
+        color: blue;
     }
-    83.33% {
-      color: indigo;
+    71.42% {
+        color: indigo;
+    }
+    85.71% {
+        color: violet;
     }
 }
 
 @keyframes changementCouleurB {
     0%, 100% {
-      background-color: red;
+        background-color: red;
     }
-    16.67% {
-      background-color: orange;
+    14.28% {
+        background-color: orange;
     }
-    33.33% {
-      background-color: yellow;
+    28.57% {
+        background-color: yellow;
     }
-    50% {
-      background-color: green;
+    42.85% {
+        background-color: green;
     }
-    66.67% {
-      background-color: blue;
+    57.14% {
+        background-color: blue;
     }
-    83.33% {
-      background-color: indigo;
+    71.42% {
+        background-color: indigo;
+    }
+    85.71% {
+        background-color: violet;
     }
 }
 

@@ -1,0 +1,8 @@
+.photo_sopranal:hover{
+opacity: 50%;
+}
+
+.photo_sopranal{
+    border: 3px, pink;
+    border-radius: 10px;
+}

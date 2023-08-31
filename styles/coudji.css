@@ -1,0 +1,81 @@
+.coudji{
+    height:100px;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+.coudji h2{
+    width: 55px;
+    position: relative;
+    transform: translateY(-50%);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    animation: mouvement 8s linear infinite, changementCouleurA 48s linear infinite;
+}
+
+.balle {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    animation: mouvement 8s linear infinite, changementCouleurB 48s linear infinite;
+}
+  
+@keyframes mouvement {
+    0%, 100% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 50px);
+    }
+}
+
+@keyframes changementCouleurA {
+    0%, 100% {
+        color: red;
+    }
+    14.28% {
+        color: orange;
+    }
+    28.57% {
+        color: yellow;
+    }
+    42.85% {
+        color: green;
+    }
+    57.14% {
+        color: blue;
+    }
+    71.42% {
+        color: indigo;
+    }
+    85.71% {
+        color: violet;
+    }
+}
+
+@keyframes changementCouleurB {
+    0%, 100% {
+        background-color: red;
+    }
+    14.28% {
+        background-color: orange;
+    }
+    28.57% {
+        background-color: yellow;
+    }
+    42.85% {
+        background-color: green;
+    }
+    57.14% {
+        background-color: blue;
+    }
+    71.42% {
+        background-color: indigo;
+    }
+    85.71% {
+        background-color: violet;
+    }
+}

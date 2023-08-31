@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+</head>
+<body>
+<script>
+// Initialisation de la scène
+const scene = new THREE.Scene()
+  
+// Initialisation de la caméra
+const camera = new THREE.PerspectiveCamera(
+    70,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+  )
+  camera.position.z = 5
+  
+// Initialisation du renderer
+const renderer = new THREE.WebGLRenderer({ antialias: true })
+    renderer.setClearColor("#000000")
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    document.body.appendChild(renderer.domElement)
+  
+// Chargement de la texture de la Terre
+const textureLoader = new THREE.TextureLoader()
+const texture = textureLoader.load(
+    "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/land_ocean_ice_cloud_2048.jpg"
+    )
+  
+// Création d'une sphère pour représenter la Terre
+const geometry = new THREE.SphereGeometry(1, 32, 32)
+const material = new THREE.MeshBasicMaterial({ map: texture })
+const earth = new THREE.Mesh(geometry, material)
+    scene.add(earth)
+  
+const starGeometry = new THREE.Geometry()
+    for (let i = 0; i < 100000; i++) {
+        const star = new THREE.Vector3()
+        star.x = THREE.Math.randFloatSpread(2000)
+        star.y = THREE.Math.randFloatSpread(2000)
+        star.z = THREE.Math.randFloatSpread(2000)
+        starGeometry.vertices.push(star)
+        }
+const starMaterial = new THREE.PointsMaterial({ color: 0xffffff })
+const stars = new THREE.Points(starGeometry, starMaterial)
+    scene.add(stars)
+  
+// Boucle de rendu
+function render() {
+    requestAnimationFrame(render)
+    earth.rotation.y += 0.001
+    stars.rotation.y += 0.001
+    renderer.render(scene, camera)
+    }
+  
+// Redimensionnement de la fenêtre
+    window.addEventListener("resize", function () {
+        camera.aspect = window.innerWidth / window.innerHeight
+        camera.updateProjectionMatrix()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+    })
+
+render()
+</script>
+</body>
+</html>
+
